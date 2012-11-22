@@ -32,7 +32,7 @@ __END__
 
 =head1 NAME
 
-App::Shiroh -
+App::Shiroh - CLI posting tool for twitter
 
 =head1 SYNOPSIS
 
