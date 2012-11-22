@@ -1,0 +1,16 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+use App::Shiroh;
+use Encode;
+
+my $config = do( $ENV{HOME}. "/.shiroh" );
+my $app = App::Shiroh->new( %$config );
+
+if ( $ARGV[0] ) {
+    $app->send( Encode::decode_utf8( $ARGV[0] ) );
+}
+else {
+    $app->send( Encode::decode_utf8( $_ ) ) for <STDIN>;
+}

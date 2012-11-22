@@ -59,7 +59,7 @@ This is an example.
      consumer_secret     => 'YOUR CONSUMER SECRET',
      access_token        => 'YOUR ACCESS TOKEN',
      access_token_secret => 'YOUR ACCESS TOKEN SECRET',
-     message_to          => 'some_nickname',
+     message_to          => 'some_nickname', ### optional. If defined, send messsage as direct-message to specified account.
   };
 
 =head1 AUTHOR
@@ -67,6 +67,8 @@ This is an example.
 ytnobody E<lt>ytnobody@gmail.comE<gt>
 
 =head1 SEE ALSO
+
+Net::Twitter::Lite
 
 =head1 LICENSE
 
