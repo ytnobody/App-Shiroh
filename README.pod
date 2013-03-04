@@ -1,10 +1,12 @@
+=encoding utf8
+
 =head1 NAME
 
 App::Shiroh - CLI posting tool for twitter
 
 =head1 SYNOPSIS
 
-In your shell, 
+In your shell,
 
   $ shiroh '俺がメッセージだ'
 
