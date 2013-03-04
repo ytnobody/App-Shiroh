@@ -2,7 +2,7 @@ use inc::Module::Install;
 name 'App-Shiroh';
 all_from 'lib/App/Shiroh.pm';
 
-requires 'Net::Twitter::Lite';
+requires 'Net::Twitter::Lite' => 0.11002;
 
 tests 't/*.t';
 author_tests 'xt';

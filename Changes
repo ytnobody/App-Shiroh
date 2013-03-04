@@ -1,4 +1,9 @@
 Revision history for Perl extension App::Shiroh
 
-0.01    Thu Nov 22 12:06:17 2012
+0.02    Mon Mar  4 17:42:36 JST 2013
+        - use classvalue for contain an instance of Net::Twitter::Lite.
+        - specify legacy_lists_api as 0.
+        - specify version for Net::Twitter::Lite in Makefile.PL
+
+0.01    Thu Nov 22 12:06:17 JST 2012
         - original version

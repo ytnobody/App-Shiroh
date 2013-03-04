@@ -1,28 +1,24 @@
 package App::Shiroh;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Net::Twitter::Lite;
+
+our $CLIENT;
 
 sub new {
     my ($class, %opts) = @_;
     my $message_to = delete $opts{message_to};
     my $self = bless {opts => {%opts}, message_to => $message_to}, $class;
-    $self->init_client;
+    $CLIENT //= Net::Twitter::Lite->new( %{$self->{opts}}, legacy_lists_api => 0 );
     $self;
-}
-
-sub init_client {
-    my $self = shift;
-    $self->{client} = Net::Twitter::Lite->new( %{$self->{opts}} );
 }
 
 sub send {
     my ($self, $mes) = @_;
-    my $client = $self->{client};
     $mes = "d ". $self->{message_to}. " ". $mes;
-    $client->update($mes);
+    $CLIENT->update($mes);
 }
 
 1;
