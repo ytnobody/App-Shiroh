@@ -1,5 +1,7 @@
 Revision history for Perl extension App::Shiroh
 
+{{$NEXT}}
+
 0.02    Mon Mar  4 17:42:36 JST 2013
         - use classvalue for contain an instance of Net::Twitter::Lite.
         - specify legacy_lists_api as 0.
