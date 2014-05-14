@@ -49,7 +49,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Net::Twitter::Lite" : "0.11002"
+            "Net::Twitter::Lite::WithAPIv1_1" : "0.12006"
          }
       }
    },
@@ -65,7 +65,7 @@
          "web" : "https://github.com/ytnobody/App-Shiroh"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_contributors" : [
       "moznion <moznion@gmail.com>"
    ]

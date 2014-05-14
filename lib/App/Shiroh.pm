@@ -1,7 +1,7 @@
 package App::Shiroh;
 use strict;
 use warnings;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Net::Twitter::Lite::WithAPIv1_1;
 
@@ -11,7 +11,7 @@ sub new {
     my ($class, %opts) = @_;
     my $message_to = delete $opts{message_to};
     my $self = bless {opts => {%opts}, message_to => $message_to}, $class;
-    $CLIENT //= Net::Twitter::Lite::WithAPIv1_1->new( %{$self->{opts}}, legacy_lists_api => 0 );
+    $CLIENT //= Net::Twitter::Lite::WithAPIv1_1->new( %{$self->{opts}}, legacy_lists_api => 0, ssl => 1 );
     $self;
 }
 
